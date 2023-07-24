@@ -20,9 +20,9 @@ class BlankFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.textView.text = arguments?.let {
-            it.getString("key")
-        }
+        binding.imageView.setImageResource(arguments?.getInt("key")?:R.drawable.img)
+        binding.textView.text= arguments?.getString("keyName")?:""
     }
+
 
 }
